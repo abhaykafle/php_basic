@@ -23,7 +23,7 @@
 <h1> information from database </h1>
 <table>
 	<tr>
-		<th>Sn</th><th>UserName</th><th>PassWord</th>
+		<th>Sn</th><th>UserName</th><th>PassWord</th><th>Action</th>
 	</tr>
 	<?php 
 	include('connect.php');
@@ -36,6 +36,7 @@
 			<td><?php echo $ans['id']; ?></td>
 			<td><?php echo $ans['username'] ?></td>
 			<td><?php echo $ans['password'] ?></td>	
+			<td><a href="update.php?sn=<?php echo $ans['id']; ?>">update</a>/<a href="delete.php?sn=<?php echo $ans['id']; ?>">delete</a></td>
 		</tr>
 		<?php
 	}
